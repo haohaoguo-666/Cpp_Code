@@ -2,11 +2,11 @@
 
 #include "vector.h"
 
-int main()
-{
-	yyf::test_vector6();
-
-	return 0;
-}
+//int main()
+//{
+//	yyf::test_vector5();
+//
+//	return 0;
+//}
 
 
