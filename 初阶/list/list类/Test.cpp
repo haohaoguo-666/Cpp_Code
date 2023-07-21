@@ -35,8 +35,6 @@ void test_list1()
 	cout << endl;
 	
 }
-
-
 int main()
 {
 	test_list1();
