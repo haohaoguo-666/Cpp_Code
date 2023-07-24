@@ -209,6 +209,17 @@ namespace yyf
 			empty_init();
 		}
 
+		list(int n, const T& value = T())
+		{
+			empty_init();
+			int i = 0;
+			while (i < n)
+			{
+				push_back(value);
+				++i;
+			}
+		}
+
 		//析构函数
 		~list()
 		{
@@ -230,6 +241,7 @@ namespace yyf
 				++first;
 			}
 		}
+
 
 		//拷贝构造
 		
@@ -332,6 +344,49 @@ namespace yyf
 		void pop_front()
 		{
 			erase(begin());
+		}
+
+		size_t size() const
+		{
+			size_t size = 0;
+			const_iterator cur = begin();
+			while (cur != end())
+			{
+				++cur;
+				++size;
+			}
+
+			return size;
+		}
+
+		bool empty()
+		{
+			return _head == begin();
+		}
+
+
+		T& front()
+		{
+			assert(!empty());
+			return _head->_next->_data;
+		}
+
+		const T& front() const
+		{
+			assert(!empty());
+			return _head->_next->_data;
+		}
+
+		T& back()
+		{
+			assert(!empty());
+			return _head->_prev->_data;
+		}
+
+		const T& back() const
+		{
+			assert(!empty());
+			return _head->_prev->_data;
 		}
 
 	private:
