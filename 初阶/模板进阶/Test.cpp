@@ -1,4 +1,10 @@
-#inlcude <iostream>
+#include <iostream>
 
 using namespace std;
 
+//ģ�����
+
+namesapce yyf
+{
+
+};
